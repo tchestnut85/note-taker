@@ -3,7 +3,7 @@ const PORT = process.env.PORT || 3002;
 const app = express();
 const fs = require('fs');
 const path = require('path');
-const { db } = require('./Develop/db/db.json');
+const { db } = require('./db/db.json');
 
 app.get('/api/db/', (req, res) => {
     res.send('Hi there!');
