@@ -1,1 +1,19 @@
-[{"title":"Test Title","text":"Test text", "id": "test_id"}]
+{
+    "notes": [
+        {
+            "title": "Coding Homework",
+            "text": "Work on coding homework assignment. Need to update api routes.",
+            "id": "0"
+        },
+        {
+            "title": "Coding Lesson",
+            "text": "Work through section 4 of this week's lesson.",
+            "id": "1"
+        },
+        {
+            "title": "Catchup on Games",
+            "text": "Need to catchup on some video games. Elder Scrolls Online, Borderlands 3, and Dragon's Dogma. Also Skyrim!",
+            "id": "2"
+        }
+    ]
+}
