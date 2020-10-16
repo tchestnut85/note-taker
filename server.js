@@ -5,19 +5,7 @@ const path = require('path');
 // const index = require('./public/assets/js/index');
 const { notes } = require('./db/db.json');
 const app = express();
-const {
-    getNotes,
-    saveNote,
-    deleteNote,
-    renderActiveNote,
-    handleNoteSave,
-    handleNoteDelete,
-    handleNoteView,
-    handleNewNoteView,
-    handleRenderSaveBtn,
-    renderNoteList,
-    getAndRenderNotes
-} = require('./public/assets/js/index');
+const indexFunctions = require('./public/assets/js/index');
 
 // Middleware from Express.js (app.use) for POST
 //parse incoming data into key/value pairs
