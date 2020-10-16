@@ -1,13 +1,8 @@
-// const fs = require('fs');
-// const path = require('path');
-
 var $noteTitle = $(".note-title");
 var $noteText = $(".note-textarea");
 var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
-
-// 
 
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
@@ -146,17 +141,3 @@ $noteText.on("keyup", handleRenderSaveBtn);
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();
-
-// module.exports = {
-//   getNotes,
-//   saveNote,
-//   deleteNote,
-//   renderActiveNote,
-//   handleNoteSave,
-//   handleNoteDelete,
-//   handleNoteView,
-//   handleNewNoteView,
-//   handleRenderSaveBtn,
-//   renderNoteList,
-//   getAndRenderNotes
-// };

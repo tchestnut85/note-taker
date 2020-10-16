@@ -26,6 +26,7 @@ app.get('/notes', (req, res) => {
 
 // GET route to return saved notes in db.json
 app.get('/api/notes', (req, res) => {
+    console.log(notes);
     return res.json(notes);
 });
 
@@ -55,12 +56,11 @@ app.post('/api/notes', (req, res) => {
     // push new note onto the notes object
     notes.push(newNote);
 
-    // NEW CODE - write new note to db.json
+    // save the updated notes object with newNote as db.json
     fs.writeFileSync(
         path.join(__dirname, './db/db.json'),
         JSON.stringify({ notes }, null, 2)
     );
-    // END NEW CODE
 
     // send response back to the client
     res.json(newNote);
