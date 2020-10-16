@@ -1,11 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 
 var $noteTitle = $(".note-title");
 var $noteText = $(".note-textarea");
 var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
+
+// 
 
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
@@ -24,7 +26,7 @@ var saveNote = function (note) {
     url: "/api/notes",
     data: note,
     method: "POST"
-  });
+  })
 };
 
 // BONUS A function for deleting a note from the db
@@ -57,15 +59,7 @@ var handleNoteSave = function () {
   var newNote = {
     title: $noteTitle.val(),
     text: $noteText.val(),
-    // add id property here?
   };
-
-  // NEW CODE - write new note to db.json
-  fs.writeFileSync(
-    path.join(__dirname, '../../db/db.json'),
-    JSON.stringify({ notes: newNote }, null, 2)
-  );
-  // END NEW CODE
 
   saveNote(newNote).then(function (data) {
     getAndRenderNotes();

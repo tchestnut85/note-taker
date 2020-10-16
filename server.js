@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { notes } = require('./db/db.json');
-// const indexFunctions = require('./public/assets/js/index');
+// const { } = require('./public/assets/js/index');
 
 // Middleware from Express.js (app.use) for POST
 //parse incoming data into key/value pairs
@@ -24,14 +24,12 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
-
-
 // GET route to return saved notes in db.json
 app.get('/api/notes', (req, res) => {
     return res.json(notes);
 });
 
-// Get route to return specified note by paramater (ID)
+// Get route to return specified note by parameter (ID)
 app.get('/api/notes/:id', (res, req) => {
     const clickedNote = req.params.id;
 
@@ -56,6 +54,13 @@ app.post('/api/notes', (req, res) => {
 
     // push new note onto the notes object
     notes.push(newNote);
+
+    // NEW CODE - write new note to db.json
+    fs.writeFileSync(
+        path.join(__dirname, './db/db.json'),
+        JSON.stringify({ notes: newNote }, null, 2)
+    );
+    // END NEW CODE
 
     // send response back to the client
     res.json(newNote);

@@ -1,19 +1,7 @@
 {
-    "notes": [
-        {
-            "title": "Coding Homework",
-            "text": "Work on coding homework assignment. Need to update api routes.",
-            "id": "0"
-        },
-        {
-            "title": "Coding Lesson",
-            "text": "Work through section 4 of this week's lesson.",
-            "id": "1"
-        },
-        {
-            "title": "Catchup on Games",
-            "text": "Need to catchup on some video games.",
-            "id": "2"
-        }
-    ]
+  "notes": {
+    "title": "Test #3",
+    "text": "wet3223rwqr3r",
+    "id": "2"
+  }
 }
