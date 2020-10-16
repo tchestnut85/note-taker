@@ -1,0 +1,44 @@
+{
+  "notes": [
+    {
+      "title": "Test #1",
+      "text": "test note",
+      "id": "0"
+    },
+    {
+      "title": "Review OOP and Class constructors",
+      "text": "Need to review previous class activities to practice OOP and class constructors. Reference the jest-rpg also.",
+      "id": "1"
+    },
+    {
+      "title": "Review OOP and Class constructors",
+      "text": "Need to review previous class activities to practice OOP and class constructors. Reference the jest-rpg also.",
+      "id": "2"
+    },
+    {
+      "title": "Review OOP and Class constructors",
+      "text": "Need to review previous class activities to practice OOP and class constructors. Reference the jest-rpg also.",
+      "id": "3"
+    },
+    {
+      "title": "Review OOP and Class constructors",
+      "text": "Need to review previous class activities to practice OOP and class constructors. Reference the jest-rpg also.",
+      "id": "4"
+    },
+    {
+      "title": "Review OOP and Class constructors",
+      "text": "Need to review previous class activities to practice OOP and class constructors. Reference the jest-rpg also.",
+      "id": "5"
+    },
+    {
+      "title": "Dog",
+      "text": "have to take the dog for a walk, feed him and brush him.",
+      "id": "6"
+    },
+    {
+      "title": "Game of Thrones",
+      "text": "House Stark, House Lannister, House Targaryen",
+      "id": "7"
+    }
+  ]
+}
