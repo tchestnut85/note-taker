@@ -58,7 +58,7 @@ app.post('/api/notes', (req, res) => {
     // NEW CODE - write new note to db.json
     fs.writeFileSync(
         path.join(__dirname, './db/db.json'),
-        JSON.stringify({ notes: newNote }, null, 2)
+        JSON.stringify({ notes }, null, 2)
     );
     // END NEW CODE
 
