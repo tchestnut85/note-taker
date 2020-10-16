@@ -66,6 +66,20 @@ app.post('/api/notes', (req, res) => {
     res.json(newNote);
 });
 
+// DELETE request to remove a specific note by its unique ID
+app.delete('/api/notes/:id', (req, res) => {
+    res.send(req.body.id);
+
+    const selectedNote = req.params.id;
+
+    // loop through note's IDs and delete the note with matching ID
+    for (let i = 0; i < notes.length; i++) {
+        if (selectedNote === notes[i].id) {
+            return res.json(notes[i])
+        }
+    }
+})
+
 // access CSS and JS assets
 app.use(express.static('public'));
 
