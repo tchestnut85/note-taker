@@ -60,12 +60,12 @@ var handleNoteSave = function () {
     // add id property here?
   };
 
-  // new code - write new note to db.json
+  // NEW CODE - write new note to db.json
   fs.writeFileSync(
     path.join(__dirname, '../../db/db.json'),
     JSON.stringify({ notes: newNote }, null, 2)
   );
-  // end new code
+  // END NEW CODE
 
   saveNote(newNote).then(function (data) {
     getAndRenderNotes();
@@ -153,16 +153,16 @@ $noteText.on("keyup", handleRenderSaveBtn);
 // Gets and renders the initial list of notes
 getAndRenderNotes();
 
-module.exports = {
-  getNotes,
-  saveNote,
-  deleteNote,
-  renderActiveNote,
-  handleNoteSave,
-  handleNoteDelete,
-  handleNoteView,
-  handleNewNoteView,
-  handleRenderSaveBtn,
-  renderNoteList,
-  getAndRenderNotes
-};
+// module.exports = {
+//   getNotes,
+//   saveNote,
+//   deleteNote,
+//   renderActiveNote,
+//   handleNoteSave,
+//   handleNoteDelete,
+//   handleNoteView,
+//   handleNewNoteView,
+//   handleRenderSaveBtn,
+//   renderNoteList,
+//   getAndRenderNotes
+// };
