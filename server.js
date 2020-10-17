@@ -5,6 +5,7 @@ const app = express();
 
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid')
 
 const { notes } = require('./db/db.json');
 
@@ -47,7 +48,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = req.body;
 
     // set unique ID to each note saved
-    newNote.id = notes.length.toString();
+    newNote.id = uuidv4();
 
     // log the new note
     console.log('\n New Note Added: ', newNote);
@@ -65,26 +66,17 @@ app.post('/api/notes', (req, res) => {
     res.json(newNote);
 });
 
-
-
 // DELETE request to remove a specific note by its unique ID
 app.delete('/api/notes/:id', (req, res) => {
-    const selectedNote = req.params.id;
+    const clickedNoteId = req.params.id;
 
-    // for (let i = 0; i < notes.length; i++) {
-    //     if (selectedNote === notes[i].id) {
-    //         console.log(notes[i].id)
-    //         let noteIndex = notes.indexOf(selectedNote);
-    //         notes.splice(noteIndex);
-    //     }
-    // }
-
-    let note = notes.filter(note => {
-        return note.id === selectedNote;
-    })[0];
-    const noteIndex = notes.indexOf(note);
-
-    notes.splice(noteIndex, 1)
+    // delete the selected note
+    for (let i = 0; i < notes.length; i++) {
+        if (clickedNoteId === notes[i].id) {
+            let noteIndex = notes.indexOf(notes[i]);
+            notes.splice(noteIndex, 1);
+        }
+    }
 
     // save the updated notes object db.json
     fs.writeFileSync(
