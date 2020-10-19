@@ -19,7 +19,7 @@ router.get('/notes/:id', (res, req) => {
             return res.json(notes[i])
         }
     }
-    return res.send('This note was not found.')
+    return res.send(404, 'This note was not found.')
 })
 
 // POST route to add new notes to db.json
