@@ -1,8 +1,6 @@
 const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
-const { notes } = require('./db/db.json');
-const path = require('path');
 
 const htmlRoutes = require('./routes/htmlRoutes/');
 const apiRoutes = require('./routes/apiRoutes/notesRoutes');
@@ -23,5 +21,5 @@ app.use(express.static('public'));
 
 // run the server
 app.listen(PORT, () => {
-    console.log(`Note-Taker API server is now on port ${PORT}!`);
+    console.log(`Note Taker server is now on port ${PORT}!`);
 });

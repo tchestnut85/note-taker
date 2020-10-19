@@ -5,7 +5,7 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
 // GET route to return saved notes in db.json
-router.get('/notes', (req, res) => {
+router.get('/notes/', (req, res) => {
     res.json(notes);
 });
 
