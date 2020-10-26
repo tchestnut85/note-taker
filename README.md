@@ -22,12 +22,16 @@
   - [License](#license) 
   
   ## Usage
-  - Click the pen icon in the upper right corner to enter a new note
-  - Enter your note's title in the "Note Title" section
-  - Enter your note's text content in the "Note Text" section
-  - When ready to save your note, click the disk icon in the upper right corner
-  - Click on a previously save note's title in the left hand column to display that note
-  - If you'd like to delete a certain note, click on the trash can icon next to that note's title
+  - **Create Note**
+    - Click the pen icon in the upper right corner to enter a new note
+    - Enter your note's title in the "Note Title" section
+    - Enter your note's text content in the "Note Text" section
+    - When ready to save your note, click the disk icon in the upper right corner
+  - **Edit Note**
+    - To edit a previosuly created note, click on a note's title in the left hand column to display that note
+    - Click on the title and text content areas to edit
+  - **Delete Note**
+    - If you'd like to delete a certain note, click on the trash can icon next to that note's title on the left hand column
 
 
   ## Tech Used
